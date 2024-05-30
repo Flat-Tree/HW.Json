@@ -1,0 +1,1501 @@
+{
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "$id": "http://example.com/example.json",
+  "title": "Root Schema",
+  "type": "object",
+  "default": {},
+  "required": [
+    "solution",
+    "project",
+    "projectNS",
+    "projectContext",
+    "context",
+    "writeMode",
+    "nukeMode",
+    "conventions",
+    "sourceDirectory",
+    "projects",
+    "testsDirectory",
+    "testProjects",
+    "aggregates",
+    "documents",
+    "chainOfCustody",
+    "commandData",
+    "queryData"
+  ],
+  "properties": {
+    "solution": {
+      "title": "The solution Schema",
+      "type": "string",
+      "default": "",
+      "examples": [
+        ""
+      ]
+    },
+    "project": {
+      "title": "The project Schema",
+      "type": "string",
+      "default": "",
+      "examples": [
+        ""
+      ]
+    },
+    "projectNS": {
+      "title": "The projectNS Schema",
+      "type": "string",
+      "default": "",
+      "examples": [
+        ""
+      ]
+    },
+    "projectContext": {
+      "title": "The projectContext Schema",
+      "type": "string",
+      "default": "",
+      "examples": [
+        ""
+      ]
+    },
+    "context": {
+      "title": "The context Schema",
+      "type": "string",
+      "default": "",
+      "examples": [
+        ""
+      ]
+    },
+    "writeMode": {
+      "title": "The writeMode Schema",
+      "type": "string",
+      "default": "",
+      "examples": [
+        "Add"
+      ]
+    },
+    "nukeMode": {
+      "title": "The nukeMode Schema",
+      "type": "string",
+      "default": "",
+      "examples": [
+        "Match"
+      ]
+    },
+    "conventions": {
+      "title": "The conventions Schema",
+      "type": "object",
+      "default": {},
+      "required": [
+        "aggregatePrefix",
+        "documentPrefix",
+        "commandPrefix",
+        "commandSuffix",
+        "eventPrefix",
+        "eventSuffix",
+        "queryPrefix",
+        "querySuffix",
+        "idChainPrefix",
+        "graphQLFilePrefix"
+      ],
+      "properties": {
+        "aggregatePrefix": {
+          "title": "The aggregatePrefix Schema",
+          "type": "string",
+          "default": "",
+          "examples": [
+            "Administration"
+          ]
+        },
+        "documentPrefix": {
+          "title": "The documentPrefix Schema",
+          "type": "string",
+          "default": "",
+          "examples": [
+            "Administration"
+          ]
+        },
+        "commandPrefix": {
+          "title": "The commandPrefix Schema",
+          "type": "string",
+          "default": "",
+          "examples": [
+            ""
+          ]
+        },
+        "commandSuffix": {
+          "title": "The commandSuffix Schema",
+          "type": "string",
+          "default": "",
+          "examples": [
+            ""
+          ]
+        },
+        "eventPrefix": {
+          "title": "The eventPrefix Schema",
+          "type": "string",
+          "default": "",
+          "examples": [
+            ""
+          ]
+        },
+        "eventSuffix": {
+          "title": "The eventSuffix Schema",
+          "type": "string",
+          "default": "",
+          "examples": [
+            ""
+          ]
+        },
+        "queryPrefix": {
+          "title": "The queryPrefix Schema",
+          "type": "string",
+          "default": "",
+          "examples": [
+            ""
+          ]
+        },
+        "querySuffix": {
+          "title": "The querySuffix Schema",
+          "type": "string",
+          "default": "",
+          "examples": [
+            ""
+          ]
+        },
+        "idChainPrefix": {
+          "title": "The idChainPrefix Schema",
+          "type": "string",
+          "default": "",
+          "examples": [
+            "Administration"
+          ]
+        },
+        "graphQLFilePrefix": {
+          "title": "The graphQLFilePrefix Schema",
+          "type": "string",
+          "default": "",
+          "examples": [
+            "Administration"
+          ]
+        }
+      },
+      "examples": [
+        {
+          "aggregatePrefix": "Administration",
+          "documentPrefix": "Administration",
+          "commandPrefix": "",
+          "commandSuffix": "",
+          "eventPrefix": "",
+          "eventSuffix": "",
+          "queryPrefix": "",
+          "querySuffix": "",
+          "idChainPrefix": "Administration",
+          "graphQLFilePrefix": "Administration"
+        }
+      ]
+    },
+    "sourceDirectory": {
+      "title": "The sourceDirectory Schema",
+      "type": "string",
+      "default": "",
+      "examples": [
+        ""
+      ]
+    },
+    "projects": {
+      "title": "The projects Schema",
+      "type": "array",
+      "default": [],
+      "items": {
+        "title": "A Schema",
+        "type": "object",
+        "default": {},
+        "required": [
+          "project",
+          "projectNS",
+          "entryPath",
+          "directories"
+        ],
+        "properties": {
+          "project": {
+            "title": "The project Schema",
+            "type": "string",
+            "default": "",
+            "examples": [
+              "Core.Component.Administration"
+            ]
+          },
+          "projectNS": {
+            "title": "The projectNS Schema",
+            "type": "string",
+            "default": "",
+            "examples": [
+              "Core.Component.Administration"
+            ]
+          },
+          "entryPath": {
+            "title": "The entryPath Schema",
+            "type": "string",
+            "default": "",
+            "examples": [
+              "Core"
+            ]
+          },
+          "directories": {
+            "title": "The directories Schema",
+            "type": "array",
+            "default": [],
+            "items": {
+              "title": "A Schema",
+              "type": "object",
+              "default": {},
+              "required": [
+                "directory",
+                "children"
+              ],
+              "properties": {
+                "directory": {
+                  "title": "The directory Schema",
+                  "type": "string",
+                  "default": "",
+                  "examples": [
+                    "Application"
+                  ]
+                },
+                "children": {
+                  "title": "The children Schema",
+                  "type": "array",
+                  "default": [],
+                  "items": {
+                    "title": "A Schema",
+                    "type": "object",
+                    "default": {},
+                    "required": [
+                      "directory",
+                      "children"
+                    ],
+                    "properties": {
+                      "directory": {
+                        "title": "The directory Schema",
+                        "type": "string",
+                        "default": "",
+                        "examples": [
+                          "Model"
+                        ]
+                      },
+                      "children": {
+                        "title": "The children Schema",
+                        "type": "array",
+                        "default": [],
+                        "items": {
+                          "title": "A Schema",
+                          "type": "object",
+                          "default": {},
+                          "required": [
+                            "directory"
+                          ],
+                          "properties": {
+                            "directory": {
+                              "title": "The directory Schema",
+                              "type": "string",
+                              "default": "",
+                              "examples": [
+                                "Command"
+                              ]
+                            }
+                          },
+                          "examples": [
+                            {
+                              "directory": "Command"
+                            }
+                          ]
+                        },
+                        "examples": [
+                          [
+                            {
+                              "directory": "Command"
+                            }
+                          ]
+                        ]
+                      }
+                    },
+                    "examples": [
+                      {
+                        "directory": "Model",
+                        "children": [
+                          {
+                            "directory": "Command"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "examples": [
+                    [
+                      {
+                        "directory": "Model",
+                        "children": [
+                          {
+                            "directory": "Command"
+                          }
+                        ]
+                      }
+                    ]
+                  ]
+                }
+              },
+              "examples": [
+                {
+                  "directory": "Application",
+                  "children": [
+                    {
+                      "directory": "Model",
+                      "children": [
+                        {
+                          "directory": "Command"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            "examples": [
+              [
+                {
+                  "directory": "Application",
+                  "children": [
+                    {
+                      "directory": "Model",
+                      "children": [
+                        {
+                          "directory": "Command"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            ]
+          }
+        },
+        "examples": [
+          {
+            "project": "Core.Component.Administration",
+            "projectNS": "Core.Component.Administration",
+            "entryPath": "Core",
+            "directories": [
+              {
+                "directory": "Application",
+                "children": [
+                  {
+                    "directory": "Model",
+                    "children": [
+                      {
+                        "directory": "Command"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "examples": [
+        [
+          {
+            "project": "Core.Component.Administration",
+            "projectNS": "Core.Component.Administration",
+            "entryPath": "Core",
+            "directories": [
+              {
+                "directory": "Application",
+                "children": [
+                  {
+                    "directory": "Model",
+                    "children": [
+                      {
+                        "directory": "Command"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      ]
+    },
+    "testsDirectory": {
+      "title": "The testsDirectory Schema",
+      "type": "string",
+      "default": "",
+      "examples": [
+        "tests"
+      ]
+    },
+    "testProjects": {
+      "title": "The testProjects Schema",
+      "type": "array",
+      "default": [],
+      "items": {
+        "title": "A Schema",
+        "type": "object",
+        "default": {},
+        "required": [
+          "project",
+          "projectNS",
+          "entryPath"
+        ],
+        "properties": {
+          "project": {
+            "title": "The project Schema",
+            "type": "string",
+            "default": "",
+            "examples": [
+              ""
+            ]
+          },
+          "projectNS": {
+            "title": "The projectNS Schema",
+            "type": "string",
+            "default": "",
+            "examples": [
+              ""
+            ]
+          },
+          "entryPath": {
+            "title": "The entryPath Schema",
+            "type": "string",
+            "default": "",
+            "examples": [
+              ""
+            ]
+          }
+        },
+        "examples": [
+          {
+            "project": "",
+            "projectNS": "",
+            "entryPath": ""
+          }
+        ]
+      },
+      "examples": [
+        [
+          {
+            "project": "",
+            "projectNS": "",
+            "entryPath": ""
+          }
+        ]
+      ]
+    },
+    "aggregates": {
+      "title": "The aggregates Schema",
+      "type": "array",
+      "default": [],
+      "items": {
+        "title": "A Schema",
+        "type": "object",
+        "default": {},
+        "required": [
+          "bridgeCommon",
+          "bridgeContextCommon",
+          "bridgeDomain",
+          "bridgeStorage",
+          "description",
+          "isRoot",
+          "model",
+          "sharedKernelAggregate"
+        ],
+        "properties": {
+          "bridgeCommon": {
+            "title": "The bridgeCommon Schema",
+            "type": "array",
+            "default": [],
+            "items": {
+              "title": "A Schema",
+              "type": "string",
+              "default": "",
+              "examples": [
+                ""
+              ]
+            },
+            "examples": [
+              [
+                ""
+              ]
+            ]
+          },
+          "bridgeContextCommon": {
+            "title": "The bridgeContextCommon Schema",
+            "type": "array",
+            "default": [],
+            "items": {
+              "title": "A Schema",
+              "type": "string",
+              "default": "",
+              "examples": [
+                ""
+              ]
+            },
+            "examples": [
+              [
+                ""
+              ]
+            ]
+          },
+          "bridgeDomain": {
+            "title": "The bridgeDomain Schema",
+            "type": "array",
+            "default": [],
+            "items": {
+              "title": "A Schema",
+              "type": "string",
+              "default": "",
+              "examples": [
+                ""
+              ]
+            },
+            "examples": [
+              [
+                ""
+              ]
+            ]
+          },
+          "bridgeStorage": {
+            "title": "The bridgeStorage Schema",
+            "type": "array",
+            "default": [],
+            "items": {
+              "title": "A Schema",
+              "type": "string",
+              "default": "",
+              "examples": [
+                ""
+              ]
+            },
+            "examples": [
+              [
+                ""
+              ]
+            ]
+          },
+          "description": {
+            "title": "The description Schema",
+            "type": "string",
+            "default": "",
+            "examples": [
+              ""
+            ]
+          },
+          "isRoot": {
+            "title": "The isRoot Schema",
+            "type": "boolean",
+            "default": false,
+            "examples": [
+              true
+            ]
+          },
+          "model": {
+            "title": "The model Schema",
+            "type": "string",
+            "default": "",
+            "examples": [
+              ""
+            ]
+          },
+          "sharedKernelAggregate": {
+            "title": "The sharedKernelAggregate Schema",
+            "type": "array",
+            "default": [],
+            "items": {
+              "title": "A Schema",
+              "type": "string",
+              "default": "",
+              "examples": [
+                ""
+              ]
+            },
+            "examples": [
+              [
+                ""
+              ]
+            ]
+          }
+        },
+        "examples": [
+          {
+            "bridgeCommon": [
+              ""
+            ],
+            "bridgeContextCommon": [
+              ""
+            ],
+            "bridgeDomain": [
+              ""
+            ],
+            "bridgeStorage": [
+              ""
+            ],
+            "description": "",
+            "isRoot": true,
+            "model": "",
+            "sharedKernelAggregate": [
+              ""
+            ]
+          }
+        ]
+      },
+      "examples": [
+        [
+          {
+            "bridgeCommon": [
+              ""
+            ],
+            "bridgeContextCommon": [
+              ""
+            ],
+            "bridgeDomain": [
+              ""
+            ],
+            "bridgeStorage": [
+              ""
+            ],
+            "description": "",
+            "isRoot": true,
+            "model": "",
+            "sharedKernelAggregate": [
+              ""
+            ]
+          }
+        ]
+      ]
+    },
+    "documents": {
+      "title": "The documents Schema",
+      "type": "array",
+      "default": [],
+      "items": {
+        "title": "A Schema",
+        "type": "object",
+        "default": {},
+        "required": [
+          "bridgeCommon",
+          "bridgeContextCommon",
+          "bridgeStorage",
+          "description",
+          "model"
+        ],
+        "properties": {
+          "bridgeCommon": {
+            "title": "The bridgeCommon Schema",
+            "type": "array",
+            "default": [],
+            "items": {
+              "title": "A Schema",
+              "type": "string",
+              "default": "",
+              "examples": [
+                ""
+              ]
+            },
+            "examples": [
+              [
+                ""
+              ]
+            ]
+          },
+          "bridgeContextCommon": {
+            "title": "The bridgeContextCommon Schema",
+            "type": "array",
+            "default": [],
+            "items": {
+              "title": "A Schema",
+              "type": "string",
+              "default": "",
+              "examples": [
+                ""
+              ]
+            },
+            "examples": [
+              [
+                ""
+              ]
+            ]
+          },
+          "bridgeStorage": {
+            "title": "The bridgeStorage Schema",
+            "type": "array",
+            "default": [],
+            "items": {
+              "title": "A Schema",
+              "type": "string",
+              "default": "",
+              "examples": [
+                "Document"
+              ]
+            },
+            "examples": [
+              [
+                "Document"
+              ]
+            ]
+          },
+          "description": {
+            "title": "The description Schema",
+            "type": "string",
+            "default": "",
+            "examples": [
+              ""
+            ]
+          },
+          "model": {
+            "title": "The model Schema",
+            "type": "string",
+            "default": "",
+            "examples": [
+              "{context}"
+            ]
+          }
+        },
+        "examples": [
+          {
+            "bridgeCommon": [
+              ""
+            ],
+            "bridgeContextCommon": [
+              ""
+            ],
+            "bridgeStorage": [
+              "Document"
+            ],
+            "description": "",
+            "model": "{context}"
+          }
+        ]
+      },
+      "examples": [
+        [
+          {
+            "bridgeCommon": [
+              ""
+            ],
+            "bridgeContextCommon": [
+              ""
+            ],
+            "bridgeStorage": [
+              "Document"
+            ],
+            "description": "",
+            "model": "{context}"
+          }
+        ]
+      ]
+    },
+    "chainOfCustody": {
+      "title": "The chainOfCustody Schema",
+      "type": "array",
+      "default": [],
+      "items": {
+        "title": "A Schema",
+        "type": "object",
+        "default": {},
+        "required": [
+          "bridgeIdentity",
+          "description",
+          "model",
+          "upstreamIdentity"
+        ],
+        "properties": {
+          "bridgeIdentity": {
+            "title": "The bridgeIdentity Schema",
+            "type": "array",
+            "default": [],
+            "items": {
+              "title": "A Schema",
+              "type": "string",
+              "default": "",
+              "examples": [
+                "NoteIdentity"
+              ]
+            },
+            "examples": [
+              [
+                "NoteIdentity"
+              ]
+            ]
+          },
+          "description": {
+            "title": "The description Schema",
+            "type": "string",
+            "default": "",
+            "examples": [
+              "Root Aggregates Note Sub Aggregate Unique Identity"
+            ]
+          },
+          "model": {
+            "title": "The model Schema",
+            "type": "string",
+            "default": "",
+            "examples": [
+              "Note"
+            ]
+          },
+          "upstreamIdentity": {
+            "title": "The upstreamIdentity Schema",
+            "type": "string",
+            "default": "",
+            "examples": [
+              "Root"
+            ]
+          }
+        },
+        "examples": [
+          {
+            "bridgeIdentity": [
+              "NoteIdentity"
+            ],
+            "description": "Root Aggregates Note Sub Aggregate Unique Identity",
+            "model": "Note",
+            "upstreamIdentity": "Root"
+          }
+        ]
+      },
+      "examples": [
+        [
+          {
+            "bridgeIdentity": [
+              "NoteIdentity"
+            ],
+            "description": "Root Aggregates Note Sub Aggregate Unique Identity",
+            "model": "Note",
+            "upstreamIdentity": "Root"
+          }
+        ]
+      ]
+    },
+    "commandData": {
+      "title": "The commandData Schema",
+      "type": "array",
+      "default": [],
+      "items": {
+        "title": "A Schema",
+        "type": "object",
+        "default": {},
+        "required": [
+          "command",
+          "commandBridgeCommon",
+          "commandBridgeContext",
+          "commandBridgeContextCommon",
+          "commandBridgeIdentity",
+          "commandBridgeStorage",
+          "description",
+          "document",
+          "documentDescription",
+          "event",
+          "eventBridgeCommon",
+          "eventBridgeContext",
+          "eventBridgeContextCommon",
+          "eventBridgeIdentity",
+          "eventBridgeStorage",
+          "idChain",
+          "schema"
+        ],
+        "properties": {
+          "command": {
+            "title": "The command Schema",
+            "type": "string",
+            "default": "",
+            "examples": [
+              "Initiate"
+            ]
+          },
+          "commandBridgeCommon": {
+            "title": "The commandBridgeCommon Schema",
+            "type": "array",
+            "default": [],
+            "items": {
+              "title": "A Schema",
+              "type": "string",
+              "default": "",
+              "examples": [
+                ""
+              ]
+            },
+            "examples": [
+              [
+                ""
+              ]
+            ]
+          },
+          "commandBridgeContext": {
+            "title": "The commandBridgeContext Schema",
+            "type": "array",
+            "default": [],
+            "items": {
+              "title": "A Schema",
+              "type": "string",
+              "default": "",
+              "examples": [
+                ""
+              ]
+            },
+            "examples": [
+              [
+                ""
+              ]
+            ]
+          },
+          "commandBridgeContextCommon": {
+            "title": "The commandBridgeContextCommon Schema",
+            "type": "array",
+            "default": [],
+            "items": {
+              "title": "A Schema",
+              "type": "string",
+              "default": "",
+              "examples": [
+                ""
+              ]
+            },
+            "examples": [
+              [
+                ""
+              ]
+            ]
+          },
+          "commandBridgeIdentity": {
+            "title": "The commandBridgeIdentity Schema",
+            "type": "array",
+            "default": [],
+            "items": {
+              "title": "A Schema",
+              "type": "string",
+              "default": "",
+              "examples": [
+                "CorrelationIdentity"
+              ]
+            },
+            "examples": [
+              [
+                "CorrelationIdentity"
+              ]
+            ]
+          },
+          "commandBridgeStorage": {
+            "title": "The commandBridgeStorage Schema",
+            "type": "array",
+            "default": [],
+            "items": {
+              "title": "A Schema",
+              "type": "string",
+              "default": "",
+              "examples": [
+                ""
+              ]
+            },
+            "examples": [
+              [
+                ""
+              ]
+            ]
+          },
+          "description": {
+            "title": "The description Schema",
+            "type": "string",
+            "default": "",
+            "examples": [
+              "Initiates an admin aggregate with default state / status"
+            ]
+          },
+          "document": {
+            "title": "The document Schema",
+            "type": "string",
+            "default": "",
+            "examples": [
+              "PassFail"
+            ]
+          },
+          "documentDescription": {
+            "title": "The documentDescription Schema",
+            "type": "string",
+            "default": "",
+            "examples": [
+              "Generation Pass_Fail"
+            ]
+          },
+          "event": {
+            "title": "The event Schema",
+            "type": "string",
+            "default": "",
+            "examples": [
+              "Initiated"
+            ]
+          },
+          "eventBridgeCommon": {
+            "title": "The eventBridgeCommon Schema",
+            "type": "array",
+            "default": [],
+            "items": {
+              "title": "A Schema",
+              "type": "string",
+              "default": "",
+              "examples": [
+                ""
+              ]
+            },
+            "examples": [
+              [
+                ""
+              ]
+            ]
+          },
+          "eventBridgeContext": {
+            "title": "The eventBridgeContext Schema",
+            "type": "array",
+            "default": [],
+            "items": {
+              "title": "A Schema",
+              "type": "string",
+              "default": "",
+              "examples": [
+                ""
+              ]
+            },
+            "examples": [
+              [
+                ""
+              ]
+            ]
+          },
+          "eventBridgeContextCommon": {
+            "title": "The eventBridgeContextCommon Schema",
+            "type": "array",
+            "default": [],
+            "items": {
+              "title": "A Schema",
+              "type": "string",
+              "default": "",
+              "examples": [
+                ""
+              ]
+            },
+            "examples": [
+              [
+                ""
+              ]
+            ]
+          },
+          "eventBridgeIdentity": {
+            "title": "The eventBridgeIdentity Schema",
+            "type": "array",
+            "default": [],
+            "items": {
+              "title": "A Schema",
+              "type": "string",
+              "default": "",
+              "examples": [
+                "CorrelationIdentity"
+              ]
+            },
+            "examples": [
+              [
+                "CorrelationIdentity"
+              ]
+            ]
+          },
+          "eventBridgeStorage": {
+            "title": "The eventBridgeStorage Schema",
+            "type": "array",
+            "default": [],
+            "items": {
+              "title": "A Schema",
+              "type": "string",
+              "default": "",
+              "examples": [
+                "StreamEvent"
+              ]
+            },
+            "examples": [
+              [
+                "StreamEvent"
+              ]
+            ]
+          },
+          "idChain": {
+            "title": "The idChain Schema",
+            "type": "string",
+            "default": "",
+            "examples": [
+              "Root"
+            ]
+          },
+          "schema": {
+            "title": "The schema Schema",
+            "type": "string",
+            "default": "",
+            "examples": [
+              "gql"
+            ]
+          }
+        },
+        "examples": [
+          {
+            "command": "Initiate",
+            "commandBridgeCommon": [
+              ""
+            ],
+            "commandBridgeContext": [
+              ""
+            ],
+            "commandBridgeContextCommon": [
+              ""
+            ],
+            "commandBridgeIdentity": [
+              "CorrelationIdentity"
+            ],
+            "commandBridgeStorage": [
+              ""
+            ],
+            "description": "Initiates an admin aggregate with default state / status",
+            "document": "PassFail",
+            "documentDescription": "Generation Pass_Fail",
+            "event": "Initiated",
+            "eventBridgeCommon": [
+              ""
+            ],
+            "eventBridgeContext": [
+              ""
+            ],
+            "eventBridgeContextCommon": [
+              ""
+            ],
+            "eventBridgeIdentity": [
+              "CorrelationIdentity"
+            ],
+            "eventBridgeStorage": [
+              "StreamEvent"
+            ],
+            "idChain": "Root",
+            "schema": "gql"
+          }
+        ]
+      },
+      "examples": [
+        [
+          {
+            "command": "Initiate",
+            "commandBridgeCommon": [
+              ""
+            ],
+            "commandBridgeContext": [
+              ""
+            ],
+            "commandBridgeContextCommon": [
+              ""
+            ],
+            "commandBridgeIdentity": [
+              "CorrelationIdentity"
+            ],
+            "commandBridgeStorage": [
+              ""
+            ],
+            "description": "Initiates an admin aggregate with default state / status",
+            "document": "PassFail",
+            "documentDescription": "Generation Pass_Fail",
+            "event": "Initiated",
+            "eventBridgeCommon": [
+              ""
+            ],
+            "eventBridgeContext": [
+              ""
+            ],
+            "eventBridgeContextCommon": [
+              ""
+            ],
+            "eventBridgeIdentity": [
+              "CorrelationIdentity"
+            ],
+            "eventBridgeStorage": [
+              "StreamEvent"
+            ],
+            "idChain": "Root",
+            "schema": "gql"
+          }
+        ]
+      ]
+    },
+    "queryData": {
+      "title": "The queryData Schema",
+      "type": "array",
+      "default": [],
+      "items": {
+        "title": "A Schema",
+        "type": "object",
+        "default": {},
+        "required": [
+          "query",
+          "description",
+          "idChain",
+          "queryBridgeIdentity",
+          "document",
+          "schema",
+          "documentDescription"
+        ],
+        "properties": {
+          "query": {
+            "title": "The query Schema",
+            "type": "string",
+            "default": "",
+            "examples": [
+              "Default"
+            ]
+          },
+          "description": {
+            "title": "The description Schema",
+            "type": "string",
+            "default": "",
+            "examples": [
+              "GraphQl primary query endpoint"
+            ]
+          },
+          "idChain": {
+            "title": "The idChain Schema",
+            "type": "string",
+            "default": "",
+            "examples": [
+              "Root"
+            ]
+          },
+          "queryBridgeIdentity": {
+            "title": "The queryBridgeIdentity Schema",
+            "type": "array",
+            "default": [],
+            "items": {
+              "title": "A Schema",
+              "type": "string",
+              "default": "",
+              "examples": [
+                "CorrelationIdentity"
+              ]
+            },
+            "examples": [
+              [
+                "CorrelationIdentity"
+              ]
+            ]
+          },
+          "document": {
+            "title": "The document Schema",
+            "type": "string",
+            "default": "",
+            "examples": [
+              "{context}"
+            ]
+          },
+          "schema": {
+            "title": "The schema Schema",
+            "type": "string",
+            "default": "",
+            "examples": [
+              "gql"
+            ]
+          },
+          "documentDescription": {
+            "title": "The documentDescription Schema",
+            "type": "string",
+            "default": "",
+            "examples": [
+              "Micro Sevice Context Object"
+            ]
+          }
+        },
+        "examples": [
+          {
+            "query": "Default",
+            "description": "GraphQl primary query endpoint",
+            "idChain": "Root",
+            "queryBridgeIdentity": [
+              "CorrelationIdentity"
+            ],
+            "document": "{context}",
+            "schema": "gql",
+            "documentDescription": "Micro Sevice Context Object"
+          }
+        ]
+      },
+      "examples": [
+        [
+          {
+            "query": "Default",
+            "description": "GraphQl primary query endpoint",
+            "idChain": "Root",
+            "queryBridgeIdentity": [
+              "CorrelationIdentity"
+            ],
+            "document": "{context}",
+            "schema": "gql",
+            "documentDescription": "Micro Sevice Context Object"
+          }
+        ]
+      ]
+    }
+  },
+  "examples": [
+    {
+      "solution": "",
+      "project": "",
+      "projectNS": "",
+      "projectContext": "",
+      "context": "",
+      "writeMode": "Add",
+      "nukeMode": "Match",
+      "conventions": {
+        "aggregatePrefix": "Administration",
+        "documentPrefix": "Administration",
+        "commandPrefix": "",
+        "commandSuffix": "",
+        "eventPrefix": "",
+        "eventSuffix": "",
+        "queryPrefix": "",
+        "querySuffix": "",
+        "idChainPrefix": "Administration",
+        "graphQLFilePrefix": "Administration"
+      },
+      "sourceDirectory": "",
+      "projects": [
+        {
+          "project": "Core.Component.Administration",
+          "projectNS": "Core.Component.Administration",
+          "entryPath": "Core",
+          "directories": [
+            {
+              "directory": "Application",
+              "children": [
+                {
+                  "directory": "Model",
+                  "children": [
+                    {
+                      "directory": "Command"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "testsDirectory": "tests",
+      "testProjects": [
+        {
+          "project": "",
+          "projectNS": "",
+          "entryPath": ""
+        }
+      ],
+      "aggregates": [
+        {
+          "bridgeCommon": [
+            ""
+          ],
+          "bridgeContextCommon": [
+            ""
+          ],
+          "bridgeDomain": [
+            ""
+          ],
+          "bridgeStorage": [
+            ""
+          ],
+          "description": "",
+          "isRoot": true,
+          "model": "",
+          "sharedKernelAggregate": [
+            ""
+          ]
+        }
+      ],
+      "documents": [
+        {
+          "bridgeCommon": [
+            ""
+          ],
+          "bridgeContextCommon": [
+            ""
+          ],
+          "bridgeStorage": [
+            "Document"
+          ],
+          "description": "",
+          "model": "{context}"
+        }
+      ],
+      "chainOfCustody": [
+        {
+          "bridgeIdentity": [
+            "NoteIdentity"
+          ],
+          "description": "Root Aggregates Note Sub Aggregate Unique Identity",
+          "model": "Note",
+          "upstreamIdentity": "Root"
+        }
+      ],
+      "commandData": [
+        {
+          "command": "Initiate",
+          "commandBridgeCommon": [
+            ""
+          ],
+          "commandBridgeContext": [
+            ""
+          ],
+          "commandBridgeContextCommon": [
+            ""
+          ],
+          "commandBridgeIdentity": [
+            "CorrelationIdentity"
+          ],
+          "commandBridgeStorage": [
+            ""
+          ],
+          "description": "Initiates an admin aggregate with default state / status",
+          "document": "PassFail",
+          "documentDescription": "Generation Pass_Fail",
+          "event": "Initiated",
+          "eventBridgeCommon": [
+            ""
+          ],
+          "eventBridgeContext": [
+            ""
+          ],
+          "eventBridgeContextCommon": [
+            ""
+          ],
+          "eventBridgeIdentity": [
+            "CorrelationIdentity"
+          ],
+          "eventBridgeStorage": [
+            "StreamEvent"
+          ],
+          "idChain": "Root",
+          "schema": "gql"
+        }
+      ],
+      "queryData": [
+        {
+          "query": "Default",
+          "description": "GraphQl primary query endpoint",
+          "idChain": "Root",
+          "queryBridgeIdentity": [
+            "CorrelationIdentity"
+          ],
+          "document": "{context}",
+          "schema": "gql",
+          "documentDescription": "Micro Sevice Context Object"
+        }
+      ]
+    }
+  ]
+}
