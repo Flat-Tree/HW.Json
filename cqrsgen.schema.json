@@ -1,41 +1,356 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "description": "",
   "type": "object",
   "properties": {
-    "solution": {
+    "aggregates": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/Aggregate"
+      }
+    },
+    "chainOfCustody": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/ChainOfCustody"
+      }
+    },
+    "commandData": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/CommandData"
+      }
+    },
+    "context": {
+      "type": "string"
+    },
+    "conventions": {
+      "$ref": "#/definitions/Conventions"
+    },
+    "documents": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/Document"
+      }
+    },
+    "nukeMode": {
       "type": "string"
     },
     "project": {
       "type": "string"
     },
-    "projectNS": {
-      "type": "string"
-    },
     "projectContext": {
       "type": "string"
     },
-    "context": {
+    "projectNS": {
+      "type": "string"
+    },
+    "projects": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/Project"
+      }
+    },
+    "queryData": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/QueryData"
+      }
+    },
+    "solution": {
+      "type": "string"
+    },
+    "sourceDirectory": {
+      "type": "string"
+    },
+    "testProjects": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/TestProject"
+      }
+    },
+    "testsDirectory": {
       "type": "string"
     },
     "writeMode": {
-      "type": "string",
-      "minLength": 1
+      "type": "string"
+    }
+  },
+  "definitions": {
+    "ModelBridgeDomain": {
+      "type": "string"
     },
-    "nukeMode": {
-      "type": "string",
-      "minLength": 1
+    "SharedKernelAggregate": {
+      "type": "string"
     },
-    "conventions": {
+    "ModelBridgeCommon": {
+      "type": "string"
+    },
+    "Anonymous4": {
+      "type": "string"
+    },
+    "Anonymous5": {
+      "type": "string"
+    },
+    "Aggregate": {
+      "type": "object",
+      "properties": {
+        "description": {
+          "type": "string"
+        },
+        "isRoot": {
+          "type": "boolean"
+        },
+        "model": {
+          "type": "string"
+        },
+        "modelBridgeDomain": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ModelBridgeDomain"
+          }
+        },
+        "sharedKernelAggregate": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/SharedKernelAggregate"
+          }
+        },
+        "modelBridgeCommon": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ModelBridgeCommon"
+          }
+        }
+      }
+    },
+    "BridgeIdentity": {
+      "type": "string"
+    },
+    "Anonymous8": {
+      "type": "string"
+    },
+    "ChainOfCustody": {
+      "type": "object",
+      "properties": {
+        "model": {
+          "type": "string"
+        },
+        "bridgeIdentity": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/BridgeIdentity"
+          }
+        },
+        "description": {
+          "type": "string"
+        },
+        "upstreamIdentity": {
+          "type": "string"
+        }
+      }
+    },
+    "CommandBridgeIdentity": {
+      "type": "string"
+    },
+    "EventBridgeStorage": {
+      "type": "string"
+    },
+    "EventBridgeIdentity": {
+      "type": "string"
+    },
+    "Anonymous13": {
+      "type": "string"
+    },
+    "Anonymous14": {
+      "type": "string"
+    },
+    "Anonymous15": {
+      "type": "string"
+    },
+    "Anonymous16": {
+      "type": "string"
+    },
+    "Anonymous17": {
+      "type": "string"
+    },
+    "Anonymous18": {
+      "type": "string"
+    },
+    "Anonymous19": {
+      "type": "string"
+    },
+    "Anonymous20": {
+      "type": "string"
+    },
+    "Anonymous21": {
+      "type": "string"
+    },
+    "Anonymous22": {
+      "type": "string"
+    },
+    "CommandBridgeCommon": {
+      "type": "string"
+    },
+    "EventBridgeCommon": {
+      "type": "string"
+    },
+    "Anonymous25": {
+      "type": "string"
+    },
+    "Anonymous26": {
+      "type": "string"
+    },
+    "Anonymous27": {
+      "type": "string"
+    },
+    "Anonymous28": {
+      "type": "string"
+    },
+    "Anonymous29": {
+      "type": "string"
+    },
+    "Anonymous30": {
+      "type": "string"
+    },
+    "Anonymous31": {
+      "type": "string"
+    },
+    "Anonymous32": {
+      "type": "string"
+    },
+    "Anonymous33": {
+      "type": "string"
+    },
+    "Anonymous34": {
+      "type": "string"
+    },
+    "Anonymous35": {
+      "type": "string"
+    },
+    "Anonymous36": {
+      "type": "string"
+    },
+    "Anonymous37": {
+      "type": "string"
+    },
+    "Anonymous38": {
+      "type": "string"
+    },
+    "Anonymous39": {
+      "type": "string"
+    },
+    "Anonymous40": {
+      "type": "string"
+    },
+    "Anonymous41": {
+      "type": "string"
+    },
+    "Anonymous42": {
+      "type": "string"
+    },
+    "Anonymous43": {
+      "type": "string"
+    },
+    "Anonymous44": {
+      "type": "string"
+    },
+    "Anonymous45": {
+      "type": "string"
+    },
+    "Anonymous46": {
+      "type": "string"
+    },
+    "Anonymous47": {
+      "type": "string"
+    },
+    "Anonymous48": {
+      "type": "string"
+    },
+    "Anonymous49": {
+      "type": "string"
+    },
+    "Anonymous50": {
+      "type": "string"
+    },
+    "Anonymous51": {
+      "type": "string"
+    },
+    "Anonymous52": {
+      "type": "string"
+    },
+    "Anonymous53": {
+      "type": "string"
+    },
+    "Anonymous54": {
+      "type": "string"
+    },
+    "Anonymous55": {
+      "type": "string"
+    },
+    "CommandData": {
+      "type": "object",
+      "properties": {
+        "description": {
+          "type": "string"
+        },
+        "command": {
+          "type": "string"
+        },
+        "commandBridgeIdentity": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/CommandBridgeIdentity"
+          }
+        },
+        "event": {
+          "type": "string"
+        },
+        "eventBridgeStorage": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/EventBridgeStorage"
+          }
+        },
+        "eventBridgeIdentity": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/EventBridgeIdentity"
+          }
+        },
+        "document": {
+          "type": "string"
+        },
+        "documentDescription": {
+          "type": "string"
+        },
+        "idChain": {
+          "type": "string"
+        },
+        "schema": {
+          "type": "string"
+        },
+        "commandBridgeCommon": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/CommandBridgeCommon"
+          }
+        },
+        "eventBridgeCommon": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/EventBridgeCommon"
+          }
+        }
+      }
+    },
+    "Conventions": {
       "type": "object",
       "properties": {
         "aggregatePrefix": {
-          "type": "string",
-          "minLength": 1
+          "type": "string"
         },
         "documentPrefix": {
-          "type": "string",
-          "minLength": 1
+          "type": "string"
         },
         "commandPrefix": {
           "type": "string"
@@ -56,420 +371,271 @@
           "type": "string"
         },
         "idChainPrefix": {
-          "type": "string",
-          "minLength": 1
+          "type": "string"
         },
         "graphQLFilePrefix": {
-          "type": "string",
-          "minLength": 1
+          "type": "string"
         }
-      },
-      "required": [
-        "aggregatePrefix",
-        "documentPrefix",
-        "commandPrefix",
-        "commandSuffix",
-        "eventPrefix",
-        "eventSuffix",
-        "queryPrefix",
-        "querySuffix",
-        "idChainPrefix",
-        "graphQLFilePrefix"
-      ]
+      }
     },
-    "sourceDirectory": {
+    "BridgeStorage": {
       "type": "string"
     },
-    "projects": {
-      "type": "array",
-      "uniqueItems": true,
-      "minItems": 1,
-      "items": {
-        "required": [
-          "project",
-          "projectNS",
-          "entryPath"
-        ],
-        "properties": {
-          "project": {
-            "type": "string",
-            "minLength": 1
-          },
-          "projectNS": {
-            "type": "string",
-            "minLength": 1
-          },
-          "entryPath": {
-            "type": "string",
-            "minLength": 1
-          },
-          "directories": {
-            "type": "array",
-            "uniqueItems": true,
-            "minItems": 1,
-            "items": {
-              "required": [
-                "directory"
-              ],
-              "properties": {
-                "directory": {
-                  "type": "string",
-                  "minLength": 1
-                },
-                "children": {
-                  "type": "array",
-                  "items": {
-                    "required": [],
-                    "properties": {}
-                  }
-                }
-              }
-            }
+    "Anonymous59": {
+      "type": "string"
+    },
+    "Anonymous60": {
+      "type": "string"
+    },
+    "BridgeCommon": {
+      "type": "string"
+    },
+    "Document": {
+      "type": "object",
+      "properties": {
+        "model": {
+          "type": "string"
+        },
+        "bridgeStorage": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/BridgeStorage"
+          }
+        },
+        "bridgeCommon": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/BridgeCommon"
           }
         }
       }
     },
-    "testsDirectory": {
-      "type": "string",
-      "minLength": 1
+    "Children": {
+      "type": "object",
+      "properties": {
+        "directory": {
+          "type": "string"
+        }
+      }
     },
-    "testProjects": {
-      "type": "array",
-      "uniqueItems": true,
-      "minItems": 1,
-      "items": {
-        "required": [
-          "project",
-          "projectNS",
-          "entryPath"
-        ],
-        "properties": {
-          "project": {
-            "type": "string"
-          },
-          "projectNS": {
-            "type": "string"
-          },
-          "entryPath": {
-            "type": "string"
+    "Anonymous64": {
+      "type": "object",
+      "properties": {
+        "directory": {
+          "type": "string"
+        },
+        "children": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Children"
           }
         }
       }
     },
-    "aggregates": {
-      "type": "array",
-      "uniqueItems": true,
-      "minItems": 1,
-      "items": {
-        "required": [
-          "description",
-          "isRoot",
-          "model"
-        ],
-        "properties": {
-          "bridgeCommon": {
-            "type": "array",
-            "items": {
-              "required": [],
-              "properties": {}
-            }
-          },
-          "bridgeContextCommon": {
-            "type": "array",
-            "items": {
-              "required": [],
-              "properties": {}
-            }
-          },
-          "bridgeDomain": {
-            "type": "array",
-            "items": {
-              "required": [],
-              "properties": {}
-            }
-          },
-          "bridgeStorage": {
-            "type": "array",
-            "items": {
-              "required": [],
-              "properties": {}
-            }
-          },
-          "description": {
-            "type": "string"
-          },
-          "isRoot": {
-            "type": "boolean"
-          },
-          "model": {
-            "type": "string"
-          },
-          "sharedKernelAggregate": {
-            "type": "array",
-            "items": {
-              "required": [],
-              "properties": {}
-            }
+    "Anonymous65": {
+      "type": "object",
+      "properties": {
+        "directory": {
+          "type": "string"
+        }
+      }
+    },
+    "Anonymous66": {
+      "type": "object",
+      "properties": {
+        "directory": {
+          "type": "string"
+        },
+        "children": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Anonymous65"
           }
         }
       }
     },
-    "documents": {
-      "type": "array",
-      "uniqueItems": true,
-      "minItems": 1,
-      "items": {
-        "required": [
-          "description",
-          "model"
-        ],
-        "properties": {
-          "bridgeCommon": {
-            "type": "array",
-            "items": {
-              "required": [],
-              "properties": {}
-            }
-          },
-          "bridgeContextCommon": {
-            "type": "array",
-            "items": {
-              "required": [],
-              "properties": {}
-            }
-          },
-          "bridgeStorage": {
-            "type": "array",
-            "items": {
-              "required": [],
-              "properties": {}
-            }
-          },
-          "description": {
-            "type": "string"
-          },
-          "model": {
-            "type": "string",
-            "minLength": 1
+    "Directorie": {
+      "type": "object",
+      "properties": {
+        "directory": {
+          "type": "string"
+        },
+        "children": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Anonymous64"
           }
         }
       }
     },
-    "chainOfCustody": {
-      "type": "array",
-      "uniqueItems": true,
-      "minItems": 1,
-      "items": {
-        "required": [
-          "description",
-          "model",
-          "upstreamIdentity"
-        ],
-        "properties": {
-          "bridgeIdentity": {
-            "type": "array",
-            "items": {
-              "required": [],
-              "properties": {}
-            }
-          },
-          "description": {
-            "type": "string",
-            "minLength": 1
-          },
-          "model": {
-            "type": "string",
-            "minLength": 1
-          },
-          "upstreamIdentity": {
-            "type": "string",
-            "minLength": 1
+    "Anonymous68": {
+      "type": "object",
+      "properties": {
+        "directory": {
+          "type": "string"
+        }
+      }
+    },
+    "Anonymous69": {
+      "type": "object",
+      "properties": {
+        "directory": {
+          "type": "string"
+        },
+        "children": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Anonymous68"
           }
         }
       }
     },
-    "commandData": {
-      "type": "array",
-      "uniqueItems": true,
-      "minItems": 1,
-      "items": {
-        "required": [
-          "command",
-          "description",
-          "document",
-          "documentDescription",
-          "event",
-          "idChain",
-          "schema"
-        ],
-        "properties": {
-          "command": {
-            "type": "string",
-            "minLength": 1
-          },
-          "commandBridgeCommon": {
-            "type": "array",
-            "items": {
-              "required": [],
-              "properties": {}
-            }
-          },
-          "commandBridgeContext": {
-            "type": "array",
-            "items": {
-              "required": [],
-              "properties": {}
-            }
-          },
-          "commandBridgeContextCommon": {
-            "type": "array",
-            "items": {
-              "required": [],
-              "properties": {}
-            }
-          },
-          "commandBridgeIdentity": {
-            "type": "array",
-            "items": {
-              "required": [],
-              "properties": {}
-            }
-          },
-          "commandBridgeStorage": {
-            "type": "array",
-            "items": {
-              "required": [],
-              "properties": {}
-            }
-          },
-          "description": {
-            "type": "string",
-            "minLength": 1
-          },
-          "document": {
-            "type": "string",
-            "minLength": 1
-          },
-          "documentDescription": {
-            "type": "string",
-            "minLength": 1
-          },
-          "event": {
-            "type": "string",
-            "minLength": 1
-          },
-          "eventBridgeCommon": {
-            "type": "array",
-            "items": {
-              "required": [],
-              "properties": {}
-            }
-          },
-          "eventBridgeContext": {
-            "type": "array",
-            "items": {
-              "required": [],
-              "properties": {}
-            }
-          },
-          "eventBridgeContextCommon": {
-            "type": "array",
-            "items": {
-              "required": [],
-              "properties": {}
-            }
-          },
-          "eventBridgeIdentity": {
-            "type": "array",
-            "items": {
-              "required": [],
-              "properties": {}
-            }
-          },
-          "eventBridgeStorage": {
-            "type": "array",
-            "items": {
-              "required": [],
-              "properties": {}
-            }
-          },
-          "idChain": {
-            "type": "string",
-            "minLength": 1
-          },
-          "schema": {
-            "type": "string",
-            "minLength": 1
+    "Anonymous70": {
+      "type": "object",
+      "properties": {
+        "directory": {
+          "type": "string"
+        },
+        "children": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Anonymous69"
           }
         }
       }
     },
-    "queryData": {
-      "type": "array",
-      "uniqueItems": true,
-      "minItems": 1,
-      "items": {
-        "required": [
-          "query",
-          "description",
-          "idChain",
-          "document",
-          "schema",
-          "documentDescription"
-        ],
-        "properties": {
-          "query": {
-            "type": "string",
-            "minLength": 1
-          },
-          "description": {
-            "type": "string",
-            "minLength": 1
-          },
-          "idChain": {
-            "type": "string",
-            "minLength": 1
-          },
-          "queryBridgeIdentity": {
-            "type": "array",
-            "items": {
-              "required": [],
-              "properties": {}
-            }
-          },
-          "document": {
-            "type": "string",
-            "minLength": 1
-          },
-          "schema": {
-            "type": "string",
-            "minLength": 1
-          },
-          "documentDescription": {
-            "type": "string",
-            "minLength": 1
+    "Anonymous71": {
+      "type": "object",
+      "properties": {
+        "directory": {
+          "type": "string"
+        }
+      }
+    },
+    "Anonymous72": {
+      "type": "object",
+      "properties": {
+        "directory": {
+          "type": "string"
+        }
+      }
+    },
+    "Anonymous73": {
+      "type": "object",
+      "properties": {
+        "directory": {
+          "type": "string"
+        }
+      }
+    },
+    "Anonymous74": {
+      "type": "object",
+      "properties": {
+        "directory": {
+          "type": "string"
+        }
+      }
+    },
+    "Anonymous75": {
+      "type": "object",
+      "properties": {
+        "directory": {
+          "type": "string"
+        },
+        "children": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Anonymous74"
           }
+        }
+      }
+    },
+    "Project": {
+      "type": "object",
+      "properties": {
+        "project": {
+          "type": "string"
+        },
+        "projectNS": {
+          "type": "string"
+        },
+        "entryPath": {
+          "type": "string"
+        },
+        "directories": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Directorie"
+          }
+        }
+      }
+    },
+    "QueryBridgeIdentity": {
+      "type": "string"
+    },
+    "Anonymous78": {
+      "type": "string"
+    },
+    "Anonymous79": {
+      "type": "string"
+    },
+    "QueryBridgeCommon": {
+      "type": "string"
+    },
+    "Anonymous81": {
+      "type": "string"
+    },
+    "QueryData": {
+      "type": "object",
+      "properties": {
+        "query": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "idChain": {
+          "type": "string"
+        },
+        "queryBridgeIdentity": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/QueryBridgeIdentity"
+          }
+        },
+        "document": {
+          "type": "string"
+        },
+        "schema": {
+          "type": "string"
+        },
+        "documentDescription": {
+          "type": "string"
+        },
+        "source": {
+          "type": "string"
+        },
+        "queryBridgeCommon": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/QueryBridgeCommon"
+          }
+        }
+      }
+    },
+    "TestProject": {
+      "type": "object",
+      "properties": {
+        "project": {
+          "type": "string"
+        },
+        "projectNS": {
+          "type": "string"
+        },
+        "entryPath": {
+          "type": "string"
         }
       }
     }
-  },
-  "required": [
-    "solution",
-    "project",
-    "projectNS",
-    "projectContext",
-    "context",
-    "writeMode",
-    "nukeMode",
-    "conventions",
-    "sourceDirectory",
-    "projects",
-    "testsDirectory",
-    "testProjects",
-    "aggregates",
-    "documents",
-    "chainOfCustody",
-    "commandData",
-    "queryData"
-  ]
+  }
 }
